@@ -13,6 +13,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'clearance'
 gem 'paperclip'
 
+gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
+gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
+
+gem 'bootstrap-sass'
+
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do

@@ -10,20 +10,27 @@
   </head>
 
   <body>
-    <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= link_to 'Sign out', sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', sign_in_path %>
-    <% end %> 
+    <div class="container"> 
+      <div class="navbar-section">
+        <div class="search-block"><%= render "search" %></div>
+        <div class="sign-status">
+          <% if signed_in? %>
+            <div>Signed in as: <span class="email"><%= current_user.email %></span></div>
+            <div><%= link_to 'Sign out', sign_out_path, method: :delete %><i class="fas fa-sign-out-alt"></i></div>
+          <% else %>
+            <div><%= link_to 'Sign in', sign_in_path %><i class="fas fa-sign-in-alt"></i></div>
+          <% end %>
+        </div>      
+      </div>
 
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
+      <div id="flash">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+      </div>
+
+      
+      <div><%= yield %></div>
     </div>
-
-    <%= render "search" %>
-    <%= yield %>
   </body>
 </html>

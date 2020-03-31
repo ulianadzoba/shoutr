@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(222, 228, 233) !important;
+    font-family: Helvetica, sans-serif !important;
+}
+
+.navbar-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: Helvetica;
+    .sign-status {
+        color: rgb(17, 75, 122);
+        text-align: end;      
+        .email {
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: none;
+            transition: all 0.3s !important;   
+        }
+        i {
+            width: 20px;
+            font-size: 22px;
+            color: black;
+        }
+    }
+}
+
+#flash {
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: rgba(196, 42, 42, 0.6);
+    border-radius: 7px;
+}
+
+.main-title {
+    padding-top: 40px;
+    color: rgb(17, 75, 122);
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#clearance {
+    h2 {
+        text-align: center;
+        color: rgb(17, 75, 122);
+        padding: 20px;
+    }
+    form {
+        color: rgb(17, 75, 122);
+        font-size: 18px;
+    }
+    form {
+        width: 35%;
+        margin: 0 auto;
+    }
+    & div {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+}
+
+input[type=submit] {
+    background: rgba(178, 189, 197, 0.5);
+    border-radius: 3px;
+    border: 1px solid rgb(17, 75, 122);
+    box-shadow: 0px 4px 5px rgba(17, 75, 122, 0.3);
+    transition: all 0.3s ease 0s;
+    margin-top: 20px;
+    &:hover {
+        background: rgba(178, 189, 197, 0.7);
+        box-shadow: 0px 6px 5px rgba(17, 75, 122, 0.7); 
+        transition: all 0.3s ease 0s;
+    }
+}
+
+input[type=text], input[type=email], input[type=password] {
+    background-color: rgba(17, 75, 122, 0.1);
+    border: 1px solid rgb(17, 75, 122);
+}
+
+.new_shout {
+    color: rgb(17, 75, 122);
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.shout {
+    width: 60%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .shout-user-photo {
+        img {
+            border-radius: 50%;
+        }
+    }
+    & div {
+        margin-right: 10px;
+    }
+}
