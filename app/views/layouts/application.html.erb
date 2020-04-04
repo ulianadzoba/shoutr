@@ -18,11 +18,13 @@
           <div class="sign-status">
             <% if signed_in? %>
               <div class="sign-as">Signed in as: <span class="email"><%= current_user.email %></span></div>
-              <div class="sign-button"><%= link_to 'Sign out', sign_out_path, method: :delete %><i class="fa fa-sign-out-alt"></i></div>
+              <div class="navbar-button"><%= link_to 'Sign out', sign_out_path, method: :delete %><i class="fa fa-sign-out-alt"></i></div>
             <% else %>
-              <div class="sign-button"><%= link_to 'Sign in', sign_in_path %><i class="fa fa-sign-in-alt"></i></div>
+              <div class="navbar-button"><%= link_to 'Sign in', sign_in_path %><i class="fa fa-sign-in-alt"></i></div>
             <% end %>
+            <div class="navbar-button home-button"><%= link_to icon('fas', 'home', class: 'strong'), root_path %></div>
           </div> 
+          
         </div>     
       </div>
     </div>

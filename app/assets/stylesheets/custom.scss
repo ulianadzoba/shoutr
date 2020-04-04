@@ -28,7 +28,7 @@ body {
         .sign-as {
             padding: 2px 15px; 
         }
-        .sign-button {
+        .navbar-button {
             border: 1px solid white;
             border-radius: 5px;
             padding: 2px 6px;
@@ -41,7 +41,13 @@ body {
                     color:  rgb(8, 35, 63);  
                 }
             }
-        }     
+        }   
+        .home-button {
+            margin-left: 7px;
+            i {
+                padding-left: 0 !important;
+            }
+        }  
         .email {
             font-weight: 600;
         }

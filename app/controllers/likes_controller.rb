@@ -3,11 +3,19 @@ class LikesController < ApplicationController
     
     def create
         current_user.like(shout)
+        # respond_to do |format|
+        #   format.html { redirect_to root_path }
+        #   format.js
+        # end
         redirect_to root_path
     end
 
     def destroy
         current_user.unlike(shout)
+        # respond_to do |format|
+        #   format.html { redirect_to root_path }
+        #   format.js
+        # end
         redirect_to root_path            
     end
 
