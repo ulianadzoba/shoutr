@@ -1,10 +1,22 @@
-<div class="shout">
-  <div class="shout-user-photo"><%= avatar shout.user%></div>
-  <div><%= link_to shout.username, shout.user%></div>
-  <div><%=  render shout.content%></div>
-  <div><%= link_to shout do %>
-    <%= time_ago_in_words(shout.created_at) %> ago
-  <% end %>
+<div class="dashboard-timeline "> 
+  <div class="shout">
+    <div class="shout-user-photo">
+      <%= avatar shout.user%>
+      <%= link_to shout.username, shout.user%>
+    </div>
+    <div class="shout-content"><%=  render shout.content%></div>
+      
+    <div class="shout-date"><%= link_to shout do %>
+      <%= time_ago_in_words(shout.created_at) %> ago
+      <% end %>
+    </div>
+    <div class="shout-like">
+      <% if current_user.liked?(shout) %>
+        <%=  link_to icon('fas', 'heart', class: 'strong'), unlike_shout_path(shout), method: :delete%>
+      <% else %>
+        <%= link_to icon('far', 'heart', class: 'strong'), like_shout_path(shout), method: :post %>
+      <%  end %>
+    </div>
+     
   </div>
-  <div><%= like_button(shout)%></div>
 </div>

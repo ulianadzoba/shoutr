@@ -1,14 +1,19 @@
-<h1 class="main-title">Dashboard</h1>
+<div class="home-page">
+  <h1 class="main-title">Dashboard</h1>
+  <div class="shout-form">
+    <%= shout_form_for(TextShout) do |form| %>
+      <%= form.text_field :body, placeholder: "shout here!", required: true%>
+    <% end %>
+  </div>
+  
+  <div class="shout-form">
+    <%= shout_form_for(PhotoShout) do |form| %>
+      <%= form.file_field :image, required: true %>
+    <% end %>
+  </div>
 
-<%= shout_form_for(TextShout) do |form| %>
-  <%= form.text_field :body, placeholder: "shout here!", required: true%>
-<% end %>
+  <%= render @dashboard.timeline %>
 
-<%= shout_form_for(PhotoShout) do |form| %>
-  <%= form.file_field :image, required: true %>
-<% end %>
-
-
-<%= render @dashboard.timeline %>
+</div>
 
 
